@@ -1,7 +1,7 @@
 #Game: LCR
-#Authors: Olayinka Jimba Jr.
+#Authors: Ollie, Nini, Ahmed
 #Date: 10/03/2022
-#Version: 2.0
+#Version: 3.0
 #Comment: Most bugs regarding the chips properly looping around the players have been fixed. 
 # The game now runs smoothly and is ready for the final version.
 
@@ -47,6 +47,7 @@ class Player:
         self.name = name
         self.chips = 3
 
+
     def take_turn(self, game):
         
         print(f"{self.name}'s turn")
@@ -54,7 +55,13 @@ class Player:
         print(f"There are {game.pot} chips in the pot")
         print("Rolling dice...")
         time.sleep(1)
-        rolls = game.dice.roll(self.chips)
+        # Prof input below #
+        numdice = self.chips
+        if numdice > 3:
+            numdice = 3
+        rolls = game.dice.roll(numdice)
+        #-------------------------------#
+        
         print(rolls)
         for roll in rolls:
             if roll == 4:
@@ -77,8 +84,8 @@ class Player:
         input()
 
     def give_chip(self, player):
-        player.chips += 1
-        self.chips -= 1
+            self.chips -= 1
+            player.chips += 1
 
         
 
