@@ -80,6 +80,8 @@ class Player:
                 print(f"{self.name} rolled a dot")
         print(f"{self.name} has {self.chips} chips")
         print(f"There are {game.pot} chips in the pot")
+        for player in game.players:
+            print(f"{player.name} has {player.chips} chips, ", end=" ")
         print("Press enter to continue")
         input()
 
