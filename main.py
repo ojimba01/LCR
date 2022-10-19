@@ -1,5 +1,5 @@
 #Game: LCR
-#Authors: Ollie, Nini, Ahmed
+#Authors: Ollie
 #Date: 10/03/2022
 #Version: 3.0
 #Comment: Most bugs regarding the chips properly looping around the players have been fixed. 
